@@ -4,11 +4,11 @@ This repository holds our backend for serving our Tensorflow2 object detection m
 
 ## Motivations
 
-While Sustainability relies on community efforts to validate images submitted by the users, we can **reduce the amount of effort** required by the community and **increase the accuracy of data collected**. 
+While Sustainability relies on community efforts to validate images submitted by the users, we can **reduce the amount of effort required** by the community and **increase the accuracy of the data collected**.
 
-When a photo is taken by a user, the AI can run inference on these images. For the particular image, if the users validation result correspond to the AI's result, it eliminates the need for other users to look at the image again. Hence, we can **reduce the number of user needed to validate per image taken.**
+When a user takes a photo, the AI can run inference on these images. For each image, if the users' validation result correspond to the AI's result, it eliminates the need for other users to look at the image again. Hence, we can **reduce the number of users needed** to validate per image taken.
 
-Furthermore, as more data are collected, these images can be used to retrain the AI and improve its performance. Eventually, we foresee a future where **community validation is no longer needed** when the trained model is robust enough and its error rate is at an acceptable level.
+Furthermore, as more data are collected, these images can be used to retrain the AI and improve its performance. Eventually, we foresee a future where **community validation is no longer needed** when the trained model is robust enough, and its error rate is acceptable.
 
 ## Technologies
 
@@ -23,7 +23,7 @@ The server only exposes a single POST request on {hostname}/api/upload
 
 ### Using Curl
 
-    curl -X POST -F file=@"<path to img>" {hostname}/predict
+    curl -X POST -F file=@"<path to img>" {hostname}/api/upload
 
 ## Setup (Local)
 
