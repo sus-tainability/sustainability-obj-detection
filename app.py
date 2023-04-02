@@ -16,11 +16,11 @@ app = Flask(__name__)
 os.environ['CUDA_VISIBLE_DEVICES'] = '-1' # disable gpu
 
 temp_dir = 'temp'
-pipeline_config = 'configs/ssd_efficientdet_d2_768x768_coco17_tpu-8.config'
-model_dir = 'trained_models/efficientdet_d2_coco17_tpu-32/checkpoint'
-label_map_path = 'label_maps/coco.pbtxt'
+pipeline_config = os.environ.get("PIPELINE_CONFIG_PATH")
+model_dir = os.environ.get("CHKPT_DIR")
+label_map_path = os.environ.get("LABEL_MAP_PATH")
 
-threshold = 0.7
+threshold = float(os.environ.get("DETECT_THRESHOLD"))
 
 # Load pipeline config and build a detection model
 configs = config_util.get_configs_from_pipeline_file(pipeline_config)
